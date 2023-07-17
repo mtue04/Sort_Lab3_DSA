@@ -22,4 +22,5 @@ Including:
 + Quick Sort
 + Counting Sort
 + Radix Sort
-+ Flash Sort
++ Flash Sort  
+And fulfill the requirements of the project [attached]
