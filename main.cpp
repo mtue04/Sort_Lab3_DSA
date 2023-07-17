@@ -1,10 +1,17 @@
-#include "sort.h"
 #include <iostream>
 #include <fstream>
 #include <string>
 #include <chrono>
+
+#include "sort.h"
+#include "HelpFunction\time.h"
+
 using namespace std;
 
+string sortingNames[11] = { "selection-sort", "insertion-sort", "bubble-sort", "shaker-sort",
+                            "shell-sort", "heap-sort", "merge-sort", "quick-sort", "counting-sort",
+                            "radix-sort", "flash-sort" };
+                            
 int main(int argc, char* argv[]) {
     if (argc < 4) {
         cout << "Usage: " << argv[0] << " -a [Algorithm] [Input size] [Input order] [Output parameter(s)]" << endl;
