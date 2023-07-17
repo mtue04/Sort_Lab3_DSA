@@ -1,3 +1,8 @@
+#ifndef _BUBBLE_SORT_H
+#define _BUBBLE_SORT_H
+
+#include "sort.h"
+
 unsigned long long bubbleSort(int arr[], int n)
 {
     unsigned long long cmp = 0;
@@ -31,3 +36,5 @@ unsigned long long bubbleSort(int arr[], int n)
     // }
     return cmp;
 }
+
+#endif

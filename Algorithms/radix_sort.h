@@ -1,3 +1,8 @@
+#ifndef _RADIX_SORT_H
+#define _RADIX_SORT_H
+
+#include "sort.h"
+
 void radixSort(int arr[], int n)
 {
     int max_val = arr[0]; // get maximum value in the array
@@ -35,3 +40,5 @@ void radixSort(int arr[], int n)
                 arr[idx++] = tempArr[j][k];
     }
 }
+
+#endif

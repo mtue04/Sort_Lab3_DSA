@@ -1,6 +1,7 @@
-
 #ifndef FLASH_SORT_HEADER
 #define FLASH_SORT_HEADER
+
+#include "sort.h"
 
 int __L[500000];
 
@@ -13,6 +14,7 @@ int __L[500000];
  * Note: m = 0.43n
  * Not Stable
  */ 
+
 unsigned long long flash_sort(int a[], int n) {
     unsigned long long cmp = 0;
     if (++cmp && n <= 1) return cmp;

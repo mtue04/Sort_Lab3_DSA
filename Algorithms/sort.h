@@ -8,6 +8,7 @@
 #define _SORT_H
 
 #include <iostream>
+#include <cmath>
 using namespace std;
 
 // -----   Selection Sort   -----//	
