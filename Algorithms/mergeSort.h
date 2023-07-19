@@ -65,5 +65,4 @@ unsigned long long mergeSortCompare(int arr[], int first, int last) {
 	return compare;
 }
 
-
 #endif
