@@ -8,8 +8,6 @@
 
 using namespace std;
 
-//test
-
 void printUsage() {
     cout << "Usage: [Execution file] -a [Algorithm] [Given input] [Output parameter(s)]\n"
          << "       [Execution file] -a [Algorithm] [Input size] [Input order] [Output parameter(s)]\n"
