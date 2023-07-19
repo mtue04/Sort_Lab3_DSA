@@ -3,7 +3,7 @@
 
 #include "sort.h"
 
-void shakerSort(int arr[], int n){
+void shakerSortTime(int arr[], int n){
     int left = 1, right = n-1, k = n-1;
     do {
         for (int j = right; j >= left; --j)

@@ -3,7 +3,7 @@
 
 #include "sort.h"
 
-void selectionSort(int arr[], int n){
+void selectionSortTime(int arr[], int n) {
 	for (int i = 0; i < n - 1; ++i){
 		int minIdx = i;
 		
@@ -14,7 +14,7 @@ void selectionSort(int arr[], int n){
 	}
 }
 
-unsigned long long selectionSort(int arr[], int n){
+unsigned long long selectionSortCompare(int arr[], int n) {
 	unsigned long long cmp = 0;
 	for (int i = 0; ++cmp && i < n - 1; ++i){
 		int minIdx = i;

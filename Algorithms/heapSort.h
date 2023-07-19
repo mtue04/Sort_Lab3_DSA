@@ -3,7 +3,7 @@
  
 #include "sort.h"
 
-void heapRebuild(int start, int arr[], int n) {
+void heapRebuildTime(int start, int arr[], int n) {
     int leftChild = 2 * start + 1;
     if (leftChild >= n) return;     
     int largerChild = leftChild;
@@ -12,17 +12,17 @@ void heapRebuild(int start, int arr[], int n) {
         largerChild = rightChild;
     if (arr[largerChild] > arr[start]) {
         swap(arr[largerChild], arr[start]);
-        heapRebuild(largerChild, arr, n);
+        heapRebuildTime(largerChild, arr, n);
     }
 }
 
-void heapSort(int arr[], int n) {
+void heapSortTime(int arr[], int n) {
     for (int index = (n - 1) / 2; index >= 0; index--)
-        heapRebuild(index, arr, n);
+        heapRebuildTime(index, arr, n);
     swap(arr[0], arr[n-1]);
     int heapSize = n - 1;
     while(heapSize > 1) {
-        heapRebuild(0, arr, heapSize);
+        heapRebuildTime(0, arr, heapSize);
         heapSize--;
         swap(arr[0], arr[heapSize]);
     }

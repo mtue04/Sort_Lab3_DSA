@@ -63,4 +63,5 @@ unsigned long long flash_sort(int a[], int n) {
     }
     return cmp;
 }
+
 #endif

@@ -3,7 +3,7 @@
 
 #include "sort.h"
 
-void shellSort(int a[], int n){
+void shellSortTime(int a[], int n) {
 	int interval, i, j, temp;
 	for(interval = n/2; interval > 0; interval /= 2){
 		for(i = interval; i < n; i++){
@@ -16,7 +16,7 @@ void shellSort(int a[], int n){
     }
 }
 
-unsigned long long shellSort(int a[], int n){
+unsigned long long shellSortCompare(int a[], int n) {
 	unsigned long long cmp = 0;
 	int interval, i, j, temp;
 	for(interval = n/2; ++cmp && interval > 0; interval /= 2){

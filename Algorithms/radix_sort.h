@@ -3,7 +3,7 @@
 
 #include "sort.h"
 
-void radixSort(int arr[], int n)
+void radixSortTime(int arr[], int n)
 {
     int max_val = arr[0]; // get maximum value in the array
     for (int i = 1; i < n; ++i)
