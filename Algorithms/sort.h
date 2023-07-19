@@ -20,8 +20,7 @@ void insertionSortTime(int arr[], int n);
 unsigned long long insertionSortCompare(int arr[], int n);
  
 // -----   Bubble Sort	    -----//
-void bubbleSortTime(int arr[], int n);
-unsigned long long bubbleSortCompare(int arr[], int n);
+
  
 // -----   Heap Sort	    -----//
 void heapRebuildTime(int start, int arr[], int n);
@@ -39,9 +38,8 @@ unsigned long long mergeSortCompare(int arr[], int first, int last);
 
  
 // -----   Radix Sort	    -----//
-void radixSortTime(int arr[], int n);
-unsigned long long radixSortCompare(int arr[], int n);
 
+ 
 // -----   Shaker Sort	    -----//
 void shakerSortTime(int arr[], int n);
 unsigned long long shakerSortCompare(int arr[], int n);
@@ -55,7 +53,5 @@ void countingSortTime(int arr[], int n);
 unsigned long long countingSortCompare(int arr[], int n);
  
 // -----   Flash Sort	    -----//
-void flashSortTime(int arr[], int n);
-unsigned long long flashSortCompare(int arr[], int n);
 
 #endif
