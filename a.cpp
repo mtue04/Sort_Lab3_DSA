@@ -8,6 +8,8 @@
 
 using namespace std;
 
+//test
+
 void printUsage() {
     cout << "Usage: [Execution file] -a [Algorithm] [Given input] [Output parameter(s)]\n"
          << "       [Execution file] -a [Algorithm] [Input size] [Input order] [Output parameter(s)]\n"
@@ -20,7 +22,7 @@ void runSortingAlgorithm(const string& algorithm, int* data, int n, const string
     if (outputParam == "-time") {
         // Handle Time Complexity
         clock_t start = clock();
-        
+
         if (algorithm == "selection-sort")
             selectionSortTime(data, n);
         else if (algorithm == "insertion-sort")
@@ -47,7 +49,7 @@ void runSortingAlgorithm(const string& algorithm, int* data, int n, const string
             cout << "Error: Invalid sorting algorithm specified!" << endl;
             return;
         }
-        
+
         clock_t end = clock();
         time = static_cast<double>(end - start) / CLOCKS_PER_SEC;
 
@@ -82,7 +84,7 @@ void runSortingAlgorithm(const string& algorithm, int* data, int n, const string
     } else if (outputParam == "-both") {
         // Handle Time Complexity
         clock_t start = clock();
-        
+
         if (algorithm == "selection-sort")
             selectionSortTime(data, n);
         else if (algorithm == "insertion-sort")
@@ -109,7 +111,7 @@ void runSortingAlgorithm(const string& algorithm, int* data, int n, const string
             cout << "Error: Invalid sorting algorithm specified!" << endl;
             return;
         }
-        
+
         clock_t end = clock();
         time = static_cast<double>(end - start) / CLOCKS_PER_SEC;
 
@@ -284,7 +286,7 @@ int main(int argc, char* argv[]) {
             runSortingAlgorithm(argv[2], data1, stoi(argv[4]), "-both", time1, compare1);
             runSortingAlgorithm(argv[3], data2, stoi(argv[4]), "-both", time2, compare2);
             // Output
-            
+
         } else {
             cout << "Error: Invalid number of arguments for comparison mode!" << endl;
             printUsage();
