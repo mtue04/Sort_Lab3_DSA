@@ -18,8 +18,8 @@ using namespace std;
 
  
 // -----   Bubble Sort	    -----//
-
- 
+void bubble_sort(int arr[], int n);                           
+unsigned long long bubble_sort_cmp(int arr[], int n);
 // -----   Heap Sort	    -----//
 void heapRebuild(int start, int arr[], int n);
 void heapSort(int arr[], int n);
@@ -31,8 +31,8 @@ void heapSort(int arr[], int n);
 
  
 // -----   Radix Sort	    -----//
-
- 
+void radix_sort(int arr[], int n);
+unsigned long long radix_sort_cmp(int arr[], int n);
 // -----   Shaker Sort	    -----//
 void shakerSort(int arr[], int n);
 
@@ -43,5 +43,6 @@ void shakerSort(int arr[], int n);
 
  
 // -----   Flash Sort	    -----//
-
+void flash_sort(int a[], int n);
+unsigned long long flash_sort_cmp(int a[], int n);
 #endif
