@@ -448,13 +448,13 @@ void shellSortTime(int a[], int n)
 unsigned long long shellSortCompare(int a[], int n)
 {
     unsigned long long cmp = 0;
-    int interval, i, j, temp;
-    for (interval = n / 2; ++cmp && interval > 0; interval /= 2)
+    int j;
+    for (int interval = n / 2; ++cmp && interval > 0; interval /= 2)
     {
-        for (i = interval; ++cmp && i < n; i++)
+        for (int i = interval; ++cmp && i < n; i++)
         {
-            temp = a[i];
-            for (j = i; cmp += 2 && j >= interval && a[j - interval] > temp; j -= interval)
+            int temp = a[i];
+            for (j = i; (++cmp && j >= interval) && (++cmp && a[j - interval] > temp); j -= interval)
             {
                 a[j] = a[j - interval];
             }
