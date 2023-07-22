@@ -319,8 +319,8 @@ int main(int argc, char *argv[])
                 data2[i] = data[i];
             }
 
-            double time1, time2;
-            unsigned long long compare1, compare2;
+            double time1 = 0, time2 = 0;
+            unsigned long long compare1 = 0, compare2 = 0;
 
             // Output
             cout << "COMPARE MODE" << endl;
@@ -372,6 +372,8 @@ int main(int argc, char *argv[])
             cout << "-------------------------" << endl;
             runSortingAlgorithm(argv[2], data1, stoi(argv[4]), "-both", time1, compare1);
             runSortingAlgorithm(argv[3], data2, stoi(argv[4]), "-both", time2, compare2);
+            cout << "Running time: " << time1 << " | " << time2 << endl;
+            cout << "Comparisons : " << compare1 << " | " << compare2 << endl;
             // Output
             
         } else {
