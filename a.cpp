@@ -1,8 +1,4 @@
-#include <iostream>
-#include <fstream>
-#include <string>
-#include <ctime>
-
+#include "Algorithms/Lib.h"
 #include "sort.h"
 #include "DataGenerator.cpp"
 
