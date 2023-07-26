@@ -2,7 +2,7 @@
 #include "Lib.h"
 // -----   Counting Sort	-----//
 //  Algorithm
-void countingSort(int arr[], int n) {
+void countingSortTime(int arr[], int n) {
     //Find max value
     long int maxVal = arr[0];
     for (long int i = 1; i < n; i++) {

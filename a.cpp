@@ -3,7 +3,7 @@
 #include "DataGenerator.cpp"
 
 using namespace std;
-
+const double CLOCKS_PER_MSEC = CLOCKS_PER_SEC/1000;
 void printUsage()
 {
     cout << "Usage: [Execution file] -a [Algorithm] [Given input] [Output parameter(s)]\n"
@@ -51,7 +51,7 @@ void runSortingAlgorithm(const string &algorithm, int *data, int n, const string
         }
 
         clock_t end = clock();
-        time = static_cast<double>(end - start) / CLOCKS_PER_SEC;
+        time = static_cast<double>(end - start) / CLOCKS_PER_MSEC;
     }
     else if (outputParam == "-comp")
     {
@@ -118,7 +118,7 @@ void runSortingAlgorithm(const string &algorithm, int *data, int n, const string
         }
 
         clock_t end = clock();
-        time = static_cast<double>(end - start) / CLOCKS_PER_SEC;
+        time = static_cast<double>(end - start) / CLOCKS_PER_MSEC;
 
         // Handle Calculating Comparisons
         if (algorithm == "selection-sort")
@@ -193,7 +193,7 @@ int main(int argc, char *argv[])
             cout << "Input order: " << argv[4] << endl;
             cout << "-------------------------" << endl;
             runSortingAlgorithm(argv[2], data, stoi(argv[3]), argv[5], time, compare);
-            cout << "Running time (if required): " << time << " sec" << endl;
+            cout << "Running time (if required): " << time << " ms" << endl;
             cout << "Comparisons  (if required): " << compare << " comparisons" << endl;
         }
         else if (argc == 5)
@@ -223,7 +223,7 @@ int main(int argc, char *argv[])
                 cout << "Input size: " << n << endl;
                 cout << "-------------------------" << endl;
                 runSortingAlgorithm(argv[2], data, n, argv[4], time, compare);
-                cout << "Running time (if required): " << time << " sec" << endl;
+                cout << "Running time (if required): " << time << " ms" << endl;
                 cout << "Comparisons  (if required): " << compare << " comparisons" << endl;
 
                 // Command 3 - Prototype: [Execution file] -a [Algorithm] [Input size] [Output parameter(s)]
@@ -244,7 +244,7 @@ int main(int argc, char *argv[])
                 cout << "-------------------------" << endl;
                 GenerateData(data, stoi(argv[3]), 0); // Generate Random Data
                 runSortingAlgorithm(argv[2], data, stoi(argv[3]), argv[4], time, compare);
-                cout << "Running time (if required): " << time << " sec" << endl;
+                cout << "Running time (if required): " << time << " ms" << endl;
                 cout << "Comparisons  (if required): " << compare << " comparisons" << endl
                      << endl;
 
@@ -253,7 +253,7 @@ int main(int argc, char *argv[])
                 data = new int[stoi(argv[3])];
                 GenerateData(data, stoi(argv[3]), 3); // Generate Nearly Sorted Data
                 runSortingAlgorithm(argv[2], data, stoi(argv[3]), argv[4], time, compare);
-                cout << "Running time (if required): " << time << " sec" << endl;
+                cout << "Running time (if required): " << time << " ms" << endl;
                 cout << "Comparisons  (if required): " << compare << " comparisons" << endl
                      << endl;
 
@@ -262,7 +262,7 @@ int main(int argc, char *argv[])
                 data = new int[stoi(argv[3])];
                 GenerateData(data, stoi(argv[3]), 1); // Generate Sorted Data
                 runSortingAlgorithm(argv[2], data, stoi(argv[3]), argv[4], time, compare);
-                cout << "Running time (if required): " << time << " sec" << endl;
+                cout << "Running time (if required): " << time << " ms" << endl;
                 cout << "Comparisons  (if required): " << compare << " comparisons" << endl
                      << endl;
 
@@ -271,7 +271,7 @@ int main(int argc, char *argv[])
                 data = new int[stoi(argv[3])];
                 GenerateData(data, stoi(argv[3]), 2); // Generate Reverse Sorted Data
                 runSortingAlgorithm(argv[2], data, stoi(argv[3]), argv[4], time, compare);
-                cout << "Running time (if required): " << time << " sec" << endl;
+                cout << "Running time (if required): " << time << " ms" << endl;
                 cout << "Comparisons  (if required): " << compare << " comparisons" << endl
                      << endl;
             }

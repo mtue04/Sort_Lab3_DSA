@@ -63,8 +63,8 @@ void shellSortTime(int a[], int n);
 unsigned long long shellSortCompare(int a[], int n);
 
 // -----   Counting Sort	-----//
-void countingSortTime(int a[], int n);
-unsigned long long countingSortCompare(int a[], int n);
+void countingSortTime(int arr[], int n);
+unsigned long long countingSortCompare(int arr[], int n);
 
 // -----   Flash Sort	    -----//
 void flashSortTime(int a[], int n);
