@@ -26,4 +26,4 @@ Including:
 And fulfill the requirements of the project [attached]
 
 ### Experimental results
- Excel link: https://studenthcmusedu-my.sharepoint.com/:x:/g/personal/22127416_student_hcmus_edu_vn/EZ5h623ACnhIkI_oHwf5xEgBqYtRi5TN12YdEEybxoWCbg?e=ke5tZC
+Excel link: https://studenthcmusedu-my.sharepoint.com/:x:/g/personal/22127416_student_hcmus_edu_vn/EZ5h623ACnhIkI_oHwf5xEgBqYtRi5TN12YdEEybxoWCbg?e=ke5tZC
