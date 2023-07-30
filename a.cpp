@@ -153,6 +153,14 @@ void runSortingAlgorithm(const string &algorithm, int *data, int n, const string
     delete[] data;
 }
 
+void GenerateFile(string filename, int* array, int n){
+	ofstream ofs(filename);
+	ofs << n << endl;
+	for (int i = 0; i < n; i++)
+		ofs << array[i] << " ";
+	ofs.close();
+}
+
 int main(int argc, char *argv[])
 {
     // Wrong Syntax
@@ -243,6 +251,7 @@ int main(int argc, char *argv[])
                 cout << "Input order: Randomize" << endl;
                 cout << "-------------------------" << endl;
                 GenerateData(data, stoi(argv[3]), 0); // Generate Random Data
+                GenerateFile("input_1.txt", data, stoi(argv[3]));
                 runSortingAlgorithm(argv[2], data, stoi(argv[3]), argv[4], time, compare);
                 cout << "Running time (if required): " << time << " ms" << endl;
                 cout << "Comparisons  (if required): " << compare << " comparisons" << endl
@@ -252,6 +261,7 @@ int main(int argc, char *argv[])
                 cout << "-------------------------" << endl;
                 data = new int[stoi(argv[3])];
                 GenerateData(data, stoi(argv[3]), 3); // Generate Nearly Sorted Data
+                GenerateFile("input_2.txt", data, stoi(argv[3]));
                 runSortingAlgorithm(argv[2], data, stoi(argv[3]), argv[4], time, compare);
                 cout << "Running time (if required): " << time << " ms" << endl;
                 cout << "Comparisons  (if required): " << compare << " comparisons" << endl
@@ -261,6 +271,7 @@ int main(int argc, char *argv[])
                 cout << "-------------------------" << endl;
                 data = new int[stoi(argv[3])];
                 GenerateData(data, stoi(argv[3]), 1); // Generate Sorted Data
+                GenerateFile("input_3.txt", data, stoi(argv[3]));
                 runSortingAlgorithm(argv[2], data, stoi(argv[3]), argv[4], time, compare);
                 cout << "Running time (if required): " << time << " ms" << endl;
                 cout << "Comparisons  (if required): " << compare << " comparisons" << endl
@@ -270,6 +281,7 @@ int main(int argc, char *argv[])
                 cout << "-------------------------" << endl;
                 data = new int[stoi(argv[3])];
                 GenerateData(data, stoi(argv[3]), 2); // Generate Reverse Sorted Data
+                GenerateFile("input_4.txt", data, stoi(argv[3]));
                 runSortingAlgorithm(argv[2], data, stoi(argv[3]), argv[4], time, compare);
                 cout << "Running time (if required): " << time << " ms" << endl;
                 cout << "Comparisons  (if required): " << compare << " comparisons" << endl
